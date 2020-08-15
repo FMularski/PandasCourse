@@ -63,3 +63,13 @@ top_3 = series_N.nlargest(3)
 # bottom n
 
 bottom_4 = series_N.nsmallest(4)
+
+q_1 = series_N.quantile(0.25) # kwartyl
+q_2 = series_N.quantile(0.5) # mediana
+
+series_N.round(3)
+
+shift_1 = series.shift(1)
+shift_2_replace_0 = series.shift(2).fillna(0)
+
+sorted_series = series.sort_values(ascending=False)
