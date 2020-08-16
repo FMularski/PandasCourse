@@ -18,4 +18,4 @@ plt.savefig('./charts/close.png', format='png')
 
 # %% export to csv
 
-close.to_csv('./data/close_amzn.csv', header=['close'])
+close.to_csv('./data/close_amzn.csv', header=['close']) 
