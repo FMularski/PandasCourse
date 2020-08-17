@@ -89,12 +89,47 @@ d = {'Wig20': ['PKN Orlen', 'PKO BP', 'LPP'],
 
 df = pd.DataFrame(d)
 
+# %% practice Series
 
+s1 = pd.Series([1, 2, 3])
+s2 = pd.Series([[1, 2], [3, 4]])
+s3 = pd.Series([[1, 2], [3, 4], [5, 6]])
 
+s4 = pd.Series(data=[100, -100], index=['idx1', 'idx2'], name='name')
+print(s4['idx1'])
 
+s5 = pd.Series(data=[[1, 2, 4, 8, 16], [32, 64, 128, 256, 512]], index=['list1', 'list2'])
+print(s5['list2'])
 
+s6 = pd.Series({'key1': 'value1', 'key2': 'value2'}, name='this is name of the column')
 
+s7 = pd.Series([{'d1_key1': 'd1_value1', 'd1_key2': 'd1_value2'}, 
+                {'d2_key1': 'd2_value1', 'd2_key2': 'd2_value2'}],
+               index=['idx1', 'idx2'],
+               name='this is name of the column')
 
+# %% practice DataFrame
+
+df1 = pd.DataFrame(data=[1, 2, 3])
+df2 = pd.DataFrame(data=[[1, 2], [3, 4]])
+df3 = pd.DataFrame(data=[[1, 2], [3, 4], [5, 6]])
+
+df4 = pd.DataFrame(data=[[100, -100], [200, -200]], index=['idx1', 'idx2'], columns=['col1', 'col2'])
+print(df4.iloc[0])
+
+df5 = pd.DataFrame({'key1': 'value1', 'key2': 'value2'}, index=['idx1'])
+print(df5.iloc[0])
+
+df6 = pd.DataFrame([{'d1_key1': 'd1_value1', 'd1_key2': 'd1_value2'},
+                    {'d1_key1': 'd2_value2', 'd1_key2': 'd2_value2'}])
+
+df7 = pd.DataFrame([{'a': 0, 'b': 0}, {'c': 0, 'd': 0}])
+
+df8 = pd.DataFrame([{'a': 0}, {'b': 0}, {'c': 0}, {'d': 0}])
+print(df8.iloc[0])
+
+for value in df8.iloc[0]:
+    print(value)
 
 
 
